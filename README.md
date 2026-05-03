@@ -319,7 +319,7 @@ Automatically skips:
 
 ✅ **Theme:** "Turn idea into impact faster"  
 ✅ **Bob IDE Usage:** Analysis sessions exported to `/bob_sessions`  
-✅ **Innovation:** Interactive dashboard beats static competitors  
+✅ **Innovation:** Interactive dashboard 
 ✅ **Real-world Impact:** Executive decision support tool  
 
 ### Judging Criteria Alignment
@@ -470,8 +470,8 @@ Built for IBM Bob Dev Day Hackathon 2026
 
 - **Issues:** [GitHub Issues](https://github.com/LarryCollinsAka/LegacyLiftAI/issues)
 - **Email:** clatehlarry@gmail.com
-- **Twitter:** [@yourhandle](https://twitter.com/yourhandle)
-- **Demo Video:** [YouTube Link](https://youtube.com/...)
+- **Twitter:** [@yourhandle](https://x.com/latehlarryaka)
+- **Demo Video:** [YouTube Link](https://www.youtube.com/watch?v=Kiz8RFFhTwA)
 
 ---
 
@@ -483,6 +483,6 @@ If LegacyLiftAI helped you modernize legacy code or win a hackathon, give it a �
 
 <div align="center">
 
-**Built with ❤️ using IBM Bob Orchestrator**
+**Built with ❤️ using IBM Bob**
 
 </div>
