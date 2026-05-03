@@ -211,7 +211,11 @@ export default function Home() {
             <button
               onClick={handleAnalyzeURL}
               disabled={!repo.trim() || loading}
-              className="rounded-2xl px-7 py-4 text-white font-bold shadow-md bg-gradient-to-r from-[#7AA2FF] via-[#5B7CFA] to-[#3E63DD] disabled:bg-slate-300 disabled:cursor-not-allowed hover:scale-[1.02] transition"
+              className={`rounded-2xl px-7 py-4 text-white font-bold shadow-md transition ${
+                !repo.trim() || loading
+                  ? 'bg-slate-300 cursor-not-allowed'
+                  : 'bg-gradient-to-r from-[#7AA2FF] via-[#5B7CFA] to-[#3E63DD] hover:scale-[1.02]'
+              }`}
             >
               {loading ? "Analyzing..." : "Analyze Repo"}
             </button>
@@ -329,7 +333,11 @@ export default function Home() {
                 <button
                   onClick={handleAnalyzeUpload}
                   disabled={loading}
-                  className="w-full mt-6 rounded-xl px-7 py-4 text-white font-bold shadow-md bg-gradient-to-r from-[#7AA2FF] via-[#5B7CFA] to-[#3E63DD] disabled:bg-slate-300 disabled:cursor-not-allowed hover:scale-[1.01] transition"
+                  className={`w-full mt-6 rounded-xl px-7 py-4 text-white font-bold shadow-md transition ${
+                    loading
+                      ? 'bg-slate-300 cursor-not-allowed'
+                      : 'bg-gradient-to-r from-[#7AA2FF] via-[#5B7CFA] to-[#3E63DD] hover:scale-[1.01]'
+                  }`}
                 >
                   {loading ? "Analyzing..." : `Analyze ${uploadedFiles.length} Files`}
                 </button>
