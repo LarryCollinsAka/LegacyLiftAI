@@ -207,6 +207,7 @@ async function analyzewithBob(repoPath: string, repoName: string) {
 
     return {
       filesAnalyzed: codeFiles.length,
+      repositoryFiles: codeFiles, // Include actual file paths
       analysis: {
         metrics,
         findings: parsedAnalysis,
@@ -424,6 +425,7 @@ function calculateMetrics(analysis: any) {
 function getSimulatedAnalysis(repoName: string, fileCount: number) {
   return {
     filesAnalyzed: fileCount,
+    repositoryFiles: [], // Would contain actual paths in real analysis
     analysis: {
       metrics: {
         securityScore: 35,
