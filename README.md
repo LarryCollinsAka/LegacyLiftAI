@@ -37,7 +37,7 @@ An AI-powered legacy code modernization platform that transforms complex codebas
 
 ## ✨ Features
 
-### 🎯 What Makes RefactorDocs Different
+### 🎯 What Makes LegacyLiftAI Different
 
 **Static Competitors:**
 ```
@@ -45,7 +45,7 @@ An AI-powered legacy code modernization platform that transforms complex codebas
 ❌ That's it
 ```
 
-**RefactorDocs:**
+**LegacyLiftAI:**
 ```
 ✅ Upload repo
 ✅ See live analysis with Bob Orchestrator
@@ -135,8 +135,8 @@ An AI-powered legacy code modernization platform that transforms complex codebas
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/refactordocs.git
-cd refactordocs
+git clone https://github.com/yourusername/LegacyLiftAI.git
+cd LegacyLiftAI
 ```
 
 2. **Install dependencies**
@@ -225,7 +225,7 @@ http://localhost:3000
 ## 📂 Project Structure
 
 ```
-refactordocs/
+LegacyLiftAI/
 ├── src/
 │   ├── app/
 │   │   ├── page.tsx                    # Homepage with upload/URL input
@@ -271,7 +271,7 @@ graph LR
 
 ### Bob Integration
 
-RefactorDocs uses IBM Bob's Orchestrator mode with 3 specialized agents:
+LegacyLiftAI uses IBM Bob's Orchestrator mode with 3 specialized agents:
 
 ```bash
 # Command executed
@@ -327,7 +327,7 @@ Automatically skips:
 
 ### Judging Criteria Alignment
 
-| Criteria | How RefactorDocs Delivers |
+| Criteria | How LegacyLiftAI Delivers |
 |----------|---------------------------|
 | **Innovation** | 4-layer interactive dashboard with live Bob chat + repo explorer |
 | **Bob Integration** | 3-agent orchestrator analysis with real-time questioning |
@@ -471,7 +471,7 @@ Built for IBM Bob Dev Day Hackathon 2026
 
 ## 📞 Contact & Support
 
-- **Issues:** [GitHub Issues](https://github.com/yourusername/refactordocs/issues)
+- **Issues:** [GitHub Issues](https://github.com/yourusername/LegacyLiftAI/issues)
 - **Email:** your.email@example.com
 - **Twitter:** [@yourhandle](https://twitter.com/yourhandle)
 - **Demo Video:** [YouTube Link](https://youtube.com/...)
@@ -480,7 +480,7 @@ Built for IBM Bob Dev Day Hackathon 2026
 
 ## 🌟 Star This Repo!
 
-If RefactorDocs helped you modernize legacy code or win a hackathon, give it a ⭐!
+If LegacyLiftAI helped you modernize legacy code or win a hackathon, give it a ⭐!
 
 ---
 

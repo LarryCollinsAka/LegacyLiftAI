@@ -67,6 +67,7 @@ export default function EnhancedDashboard() {
       try {
         const parsed = JSON.parse(stored);
         console.log("📊 Loaded analysis data:", parsed);
+        console.log("📁 Repository files:", parsed.repositoryFiles);
         setData(parsed);
 
         // Initialize with welcome message
@@ -154,8 +155,11 @@ export default function EnhancedDashboard() {
   // REPO EXPLORER - BUILD REAL FILE TREE
   // ============================================
   function buildFileTree() {
+    console.log("🌳 Building file tree...");
+    console.log("📦 Repository files available:", data?.repositoryFiles);
+
     if (!data?.repositoryFiles || data.repositoryFiles.length === 0) {
-      // Fallback to mock tree if no files available
+      console.warn("⚠️ No repository files found!");
       return {
         "No files available": "empty",
       };
@@ -183,13 +187,17 @@ export default function EnhancedDashboard() {
       });
     });
 
+    console.log("✅ File tree built:", tree);
     return tree;
   }
 
   function renderFileTree(tree: any, path: string = "") {
     return Object.keys(tree).map((name) => {
       const fullPath = path ? `${path}/${name}` : name;
-      const isFolder = typeof tree[name] === "object";
+      const isFolder =
+        typeof tree[name] === "object" &&
+        tree[name] !== "file" &&
+        tree[name] !== "empty";
       const isExpanded = expandedFolders.has(fullPath);
 
       if (isFolder) {
@@ -354,12 +362,38 @@ export default function EnhancedDashboard() {
               </div>
             </div>
 
-            <button
-              onClick={exportJiraTasks}
-              className="px-4 py-2 bg-gradient-to-r from-[#7AA2FF] via-[#5B7CFA] to-[#3E63DD] text-white rounded-lg font-medium text-sm hover:scale-[1.02] transition shadow-sm"
-            >
-              📋 Export Jira Tasks
-            </button>
+            {/* FIXED: Export buttons restored */}
+            <div className="flex gap-3">
+              <button
+                onClick={() => {
+                  const dataStr = JSON.stringify(data, null, 2);
+                  const blob = new Blob([dataStr], {
+                    type: "application/json",
+                  });
+                  const url = URL.createObjectURL(blob);
+                  const link = document.createElement("a");
+                  link.href = url;
+                  link.download = `refactordocs-${data.repository.replace(/\//g, "-")}-${Date.now()}.json`;
+                  link.click();
+                  URL.revokeObjectURL(url);
+                }}
+                className="px-4 py-2 bg-white border border-slate-300 rounded-lg font-medium text-sm hover:bg-slate-50 transition"
+              >
+                💾 Export JSON
+              </button>
+              <button
+                onClick={() => window.print()}
+                className="px-4 py-2 bg-white border border-slate-300 rounded-lg font-medium text-sm hover:bg-slate-50 transition"
+              >
+                📄 Export PDF
+              </button>
+              <button
+                onClick={exportJiraTasks}
+                className="px-4 py-2 bg-gradient-to-r from-[#7AA2FF] via-[#5B7CFA] to-[#3E63DD] text-white rounded-lg font-medium text-sm hover:scale-[1.02] transition shadow-sm"
+              >
+                📋 Export Jira Tasks
+              </button>
+            </div>
           </div>
 
           {/* 3-Layer View Switcher */}
@@ -408,7 +442,6 @@ export default function EnhancedDashboard() {
           </div>
         </div>
       </header>
-
       {/* ============================================
           LAYER 1 - OVERVIEW (EXISTING DASHBOARD)
           ============================================ */}
@@ -632,9 +665,6 @@ export default function EnhancedDashboard() {
               </div>
             </div>
           </section>
-
-          {/* Security Findings & Roadmap (existing sections remain) */}
-          {/* ... keeping existing sections ... */}
         </main>
       )}
 
@@ -646,7 +676,6 @@ export default function EnhancedDashboard() {
           <AnalysisReport data={data} />
         </div>
       )}
-
       {/* ============================================
           LAYER 3 - BOB CONSOLE (LIVE CHAT)
           ============================================ */}
