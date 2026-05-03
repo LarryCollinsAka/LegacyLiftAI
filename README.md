@@ -25,9 +25,6 @@ An AI-powered legacy code modernization platform that transforms complex codebas
 ![Bob Console](./screenshots/bob-console.png)
 *Ask Bob questions live: "Why is security low?" • "Show vulnerable files" • "Generate Jira tasks"*
 
-### 📁 Repository Explorer - Evidence View
-![Repo Explorer](./screenshots/repo-explorer.png)
-*Browse your actual repository files with vulnerability highlighting and inline security warnings*
 
 ### 📄 Executive Report - Board-Ready PDF
 ![Executive Report](./screenshots/executive-report.png)
@@ -471,8 +468,8 @@ Built for IBM Bob Dev Day Hackathon 2026
 
 ## 📞 Contact & Support
 
-- **Issues:** [GitHub Issues](https://github.com/yourusername/LegacyLiftAI/issues)
-- **Email:** your.email@example.com
+- **Issues:** [GitHub Issues](https://github.com/LarryCollinsAka/LegacyLiftAI/issues)
+- **Email:** clatehlarry@gmail.com
 - **Twitter:** [@yourhandle](https://twitter.com/yourhandle)
 - **Demo Video:** [YouTube Link](https://youtube.com/...)
 
