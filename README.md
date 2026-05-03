@@ -449,9 +449,9 @@ MIT License - see [LICENSE](LICENSE) file for details
 
 ## 👥 Team
 
-**Project Lead:** [Your Name]  
-**IBM Bob Integration:** [Your Name]  
-**UI/UX Design:** [Your Name]  
+**Project Lead:** Fortune Techies
+**IBM Bob Integration:** Fortune Techies
+**UI/UX Design:** Fortune Techies 
 
 Built for IBM Bob Dev Day Hackathon 2026
 
